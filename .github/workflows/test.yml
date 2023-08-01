@@ -13,11 +13,11 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-  docker:
-    uses: AksharaDeena/reusable-workflow/.github/workflows/main.yml@main
-    with:
-      image_name: my-awesome-app
-      tag: ${{github.run_number}}
+  # docker:
+  #   uses: AksharaDeena/reusable-workflow/.github/workflows/main.yml@main
+  #   with:
+  #     image_name: my-awesome-app
+  #     tag: ${{github.run_number}}
   #   secrets:
   #     registry_username: ${{secrets.REGISTRY_USERNAME}}
   #     registry_password: ${{secrets.REGISTRY_PASSWORD}}

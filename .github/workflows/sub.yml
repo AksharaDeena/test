@@ -1,0 +1,32 @@
+name: Sub Workflow
+
+on:
+    workflow_dispatch:
+    workflow_call:
+      inputs:
+        config-path:
+          required: false
+          type: string
+      secrets:
+        envPAT:
+          required: false
+
+jobs:
+    sub-job1:
+        runs-on: ubuntu
+        steps:
+            - uses: actions/checkout@v3.5.3
+
+            - name: Run a one-line script
+              run: echo Hello, Hi world!
+
+    reusable_workflow_job:
+      runs-on: ubuntu-latest
+      steps:
+      - name: First
+        # with:
+        #   repo-token: ${{ secrets.envPAT }}
+        #   configuration-path: ${{ inputs.config-path }}
+        run: |
+            echo reusable workflow
+        

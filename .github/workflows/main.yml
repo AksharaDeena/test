@@ -1,0 +1,24 @@
+name: Main Workflow
+
+on:
+    workflow_dispatch:
+
+jobs:
+    reusable_workflow_job:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3.5.3
+
+        - name: Run Hello World
+          run: echo Hello, world!
+        
+    # call-workflow-passing-data:
+    #   uses: AksharaDeena/test/.github/workflows/sub.yml@main
+    #   with:
+    #     config-path: .github/labeler.yml
+    #   secrets:
+    #     envPAT: ${{ secrets.envPAT }}
+      # - uses: actions/labeler@v4
+      #   with:
+      #     repo-token: ${{ secrets.envPAT }}
+      #     configuration-path: ${{ inputs.config-path }}
