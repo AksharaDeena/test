@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    reusable_workflow_job:
+    sample:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3.5.3
@@ -12,7 +12,7 @@ jobs:
         - name: Run Hello World
           run: echo Hello, world!
         
-    call-workflow-passing-data:
+    caller-workflow-passing-data:
       uses: AksharaDeena/test/.github/workflows/sub.yml@main
       # with:
       #   config-path: .github/labeler.yml
