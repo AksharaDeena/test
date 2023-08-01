@@ -12,12 +12,12 @@ jobs:
         - name: Run Hello World
           run: echo Hello, world!
         
-    # call-workflow-passing-data:
-    #   uses: AksharaDeena/test/.github/workflows/sub.yml@main
-    #   with:
-    #     config-path: .github/labeler.yml
-    #   secrets:
-    #     envPAT: ${{ secrets.envPAT }}
+    call-workflow-passing-data:
+      uses: AksharaDeena/test/.github/workflows/sub.yml@main
+      # with:
+      #   config-path: .github/labeler.yml
+      # secrets:
+      #   envPAT: ${{ secrets.envPAT }}
       # - uses: actions/labeler@v4
       #   with:
       #     repo-token: ${{ secrets.envPAT }}

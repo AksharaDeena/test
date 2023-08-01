@@ -15,18 +15,17 @@ jobs:
     sub-job1:
         runs-on: ubuntu
         steps:
-            - uses: actions/checkout@v3.5.3
-
-            - name: Run a one-line script
-              run: echo Hello, Hi world!
+            - name: sub-job1
+              run: echo sub-job1
 
     reusable_workflow_job:
       runs-on: ubuntu-latest
       steps:
-      - name: First
+      - name: reusable_workflow
+        run: |
+          echo reusable_workflow_job
         # with:
         #   repo-token: ${{ secrets.envPAT }}
         #   configuration-path: ${{ inputs.config-path }}
-        run: |
-            echo reusable workflow
+
         
