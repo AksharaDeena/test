@@ -7,9 +7,11 @@ on:
         config-path:
           required: false
           type: string
+          default: ./github/test.yml
         config-value:
           required: false
           type: string
+          default: testvalue
       secrets:
         envPAT:
           required: false
@@ -28,7 +30,12 @@ jobs:
         run: |
           echo reusable_workflow_job
       
-      - uses: actions/labeler@v4
-        with:
-          repo-token: ${{ secrets.envPAT }}
-          configuration-path: ${{ inputs.config-path }}
+      - name: Echo the input values
+        run: |
+          echo ${{ inputs.config-path }}
+          echo ${{ inputs.config-value }}
+      
+      # - uses: actions/labeler@v4
+      #   with:
+      #     repo-token: ${{ secrets.envPAT }}
+      #     configuration-path: ${{ inputs.config-path }}
