@@ -15,11 +15,8 @@ jobs:
         
     caller-workflow-passing-data:
       uses: AksharaDeena/test/.github/workflows/sub.yml@main
+      secrets: inherit
       # with:
-      #   config-path: .github/labeler.yml
+      #   config-value: ${{ inputs.config-value }}
       # secrets:
       #   envPAT: ${{ secrets.envPAT }}
-      # - uses: actions/labeler@v4
-      #   with:
-      #     repo-token: ${{ secrets.envPAT }}
-      #     configuration-path: ${{ inputs.config-path }}

@@ -7,6 +7,9 @@ on:
         config-path:
           required: false
           type: string
+        config-value:
+          required: false
+          type: string
       secrets:
         envPAT:
           required: false
@@ -24,8 +27,8 @@ jobs:
       - name: reusable_workflow
         run: |
           echo reusable_workflow_job
-        # with:
-        #   repo-token: ${{ secrets.envPAT }}
-        #   configuration-path: ${{ inputs.config-path }}
-
-        
+      
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.envPAT }}
+          configuration-path: ${{ inputs.config-path }}
