@@ -32,8 +32,8 @@ jobs:
       
       - name: Echo the input values
         run: |
-          echo ${{ inputs.config-path }}
-          echo ${{ inputs.config-value }}
+          echo This is config-path input : ${{ inputs.config-path }}
+          echo This is config-value input : ${{ inputs.config-value }}
       
       # - uses: actions/labeler@v4
       #   with:
