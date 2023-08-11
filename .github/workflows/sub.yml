@@ -21,14 +21,14 @@ jobs:
       runs-on: ubuntu-20.04
       steps:
       - name: sub-job1
-        run: echo sub-job1
+        run: echo sub-job1 in Sub Workflow
 
     reusable_workflow_job:
       runs-on: ubuntu-latest
       steps:
       - name: reusable_workflow
         run: |
-          echo reusable_workflow_job
+          echo reusable_workflow_job in Sub Workflow
       
       - name: Echo the input values
         run: |
