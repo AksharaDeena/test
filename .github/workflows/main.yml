@@ -10,12 +10,16 @@ jobs:
       steps:
         - uses: actions/checkout@v3.5.3
 
-        - name: Run Hello World
-          run: echo Hello, world!
+        # - name: Run Hello World
+        #   run: echo Hello, world!
         
-    caller-workflow-passing-data:
-      uses: AksharaDeena/test/.github/workflows/sub.yml@main
-      secrets: inherit
+        - name: Run Python script
+          run: |
+            python main.py
+        
+    # caller-workflow-passing-data:
+    #   uses: AksharaDeena/test/.github/workflows/sub.yml@main
+    #   secrets: inherit
       # with:
       #   config-value: ${{ inputs.config-value }}
       # secrets:
