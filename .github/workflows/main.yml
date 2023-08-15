@@ -15,7 +15,8 @@ jobs:
         
         - name: Run Python script
           run: |
-            sudo ./wrapper_script.sh python main.py
+            chmod +x wrapper_script.sh 
+            ./wrapper_script.sh python main.py
         
     # caller-workflow-passing-data:
     #   uses: AksharaDeena/test/.github/workflows/sub.yml@main
