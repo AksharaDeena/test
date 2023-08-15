@@ -12,7 +12,7 @@ command_pid=$!
 trap "rm $temp_stdout; exit" SIGTERM
 
 # Set the timeout duration in seconds
-timeout_duration=50 # 1800 # 30 minutes
+timeout_duration=40 # 1800 # 30 minutes
 
 # Get the current timestamp
 start_time=$(date +%s)
