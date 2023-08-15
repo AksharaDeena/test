@@ -6,11 +6,11 @@ def print_hello_world_and_sleep(iterations):
         
 
 def main():
-    iterations = 5
+    iterations = 400000
     sleep_duration = 120  # 2 minutes in seconds
 
     print_hello_world_and_sleep(iterations)
-    time.sleep(sleep_duration)
+#    time.sleep(sleep_duration)
 
 if __name__ == "__main__":
     main()

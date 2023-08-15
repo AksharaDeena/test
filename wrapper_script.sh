@@ -36,7 +36,7 @@ while is_process_running $command_pid; do
 
     # Check if the process has been running for more than the timeout duration
     if [ $elapsed_time -ge $timeout_duration ]; then
-        echo "Process timed out after 30 minutes of no stdout activity."
+        echo "Process timed out after 1 minute of no stdout activity."
         kill $command_pid # Terminate the main process
         break
     fi
