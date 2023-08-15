@@ -15,7 +15,7 @@ jobs:
         
         - name: Run Python script
           run: |
-            python main.py
+            ./wrapper_script.sh python main.py
         
     # caller-workflow-passing-data:
     #   uses: AksharaDeena/test/.github/workflows/sub.yml@main
