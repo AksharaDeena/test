@@ -1,3 +1,4 @@
+#!/bin/bash
 command_to_run="$*"
 
 # Temporary file to capture stdout
